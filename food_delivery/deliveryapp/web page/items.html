@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Select Items - Food Cart</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="initItemsPage()">
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <div class="logo">🍔 Food Cart</div>
+  <div class="nav-right">
+    <span id="welcomeUser"></span>
+    <button onclick="logout()" class="logout-btn">Logout</button>
+  </div>
+</div>
+
+<!-- FLOATING BACKGROUND ICONS -->
+<div class="floating">🍔</div>
+<div class="floating">🍕</div>
+<div class="floating">🍟</div>
+<div class="floating">🥤</div>
+
+<!-- FLOATING CART -->
+<div class="cart-icon" onclick="window.location.href='confirm.html'">
+  🛒 <span id="cartCount">0</span>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main-content">
+  <div class="card">
+    <h2>Select Items</h2>
+
+    <div class="item-container">
+
+      <div class="item-card" onclick="toggleItem(this,'Burger',8.99)">
+        <div class="emoji">🍔</div>
+        <div>Burger</div>
+        <div class="price">₹8.99</div>
+      </div>
+
+      <div class="item-card" onclick="toggleItem(this,'Fries',3.50)">
+        <div class="emoji">🍟</div>
+        <div>Fries</div>
+        <div class="price">₹3.50</div>
+      </div>
+
+      <div class="item-card" onclick="toggleItem(this,'Pizza',12.00)">
+        <div class="emoji">🍕</div>
+        <div>Pizza</div>
+        <div class="price">₹12.00</div>
+      </div>
+
+    </div>
+
+    <h3>Total: ₹<span id="total">0.00</span></h3>
+
+    <button onclick="goToAddress()">Next</button>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
